@@ -1,0 +1,21 @@
+import java.util.*;
+import java.io.*;
+
+public class Entrypoint {
+public static void main (String[] args) {
+	Scanner Scan = new Scanner(System.in);
+	
+	
+	System.out.print("Please input the employee's first name: ");
+	String FirstName = Scan.next();
+	System.out.print("Please input the employee's last name: ");
+	String LastName = Scan.next();
+	System.out.print("Please input the employee's age: ");
+	int Age = Scan.nextInt();
+	System.out.print("Please input the employee's monthly salary: ");
+	double MonthlySalary = Scan.nextDouble();
+
+ Employee myObj = new Employee(FirstName, LastName, Age, MonthlySalary);
+ System.out.println("Employee information: " + myObj.FirstName+" " + myObj.LastName+", " + myObj.Age+", " + myObj.MonthlySalary);
+
+}}
