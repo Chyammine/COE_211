@@ -6,7 +6,7 @@ public class Calculator {
 	    private String operator;
 
 	    // Constructor to initialize the calculator
-	   public  Calculator()
+	   public Calculator()
 	   {
 
 	        // Get user input
@@ -15,17 +15,24 @@ public class Calculator {
 	        num1 = scanCalc.nextInt();
 			
 			System.out.print("Input the operator: ");
-		    operator = scanCalc.toString();
+			scanCalc.nextLine();
+			operator = scanCalc.nextLine();
+		    
 			System.out.print("Input the second number: ");
 			num2 = scanCalc.nextInt();
-	   if (operator=="+") {
-		   add(num1,num2);}
-		   else if (operator=="-") {
-			   subtract(num1,num2);
+			
+	   if (operator.equals("+")) {
+		System.out.print(add(num1,num2));}
+		   else if (operator.equals("-")) {
+			   System.out.print(subtract(num1,num2));
 	   }
-		   else if (operator)
-	        
-
+		   else if (operator.equals("*")) {
+			  System.out.print (multiply(num1,num2));
+		   }
+		   else if(operator.equals("/")) {
+			 System.out.print  (divide(num1,num2));
+		   }
+			   
 	        
 	        /**
 	         * Continue code here to ask for the first number, the operator, and the second number, IN THAT ORDER
@@ -39,29 +46,31 @@ public class Calculator {
 	    }
 
 	    public String add(int a, int b) {
-	      return "a"+"+"+"b";
+	      return (a) + "+" +(b) + "=" + (a+b);
 	    		  /**
 	         * Enter logic
 	         */
 	    }
 
 	    public String subtract(int a, int b) {
-	        return "a"+"-"+"b";
+	        return a + "-" + b + "=" + (a-b);
 	    	/**
 	         * Enter logic
 	         */
 	    }
 
 	    public String multiply(int a, int b) {
-	        /**
+	        return a+ "*" + b + "=" + a*b;
+	        		/**
 	         * Enter logic
 	         */
 	    }
 
 	    public String divide(int a, int b) {
-	        /**
+	       return a + "/" + b + "=" + a/b;
+	       		 /**
 	         * Enter logic
 	         */
 	    }
 	}
-}
+

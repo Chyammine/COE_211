@@ -1,3 +1,4 @@
+package packageName;
 
 public class AdvancedWeek {
 
